@@ -4,6 +4,8 @@ last task in ml eng course
 !pip install last_task
 # to use 
 import last_task\
-X, y, df = last_task.get_data('rawdata_new.csv')\
+path=f'{last_task.__path__[0]}/rawdata_new.csv'\
+X, y, df = last_task.get_data(path)\
 X = last_task.preproc(X)\
-y_pred, clf = last_task.train_predict(X, y.to_numpy().ravel(), 'l2', 1, 'lbfgs')
+y_pred, clf = last_task.train_predict(X, y.to_numpy().ravel(), 'l2', 1, 'lbfgs')\
+Microservice task - save model to pickle + add predict method
